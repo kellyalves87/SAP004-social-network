@@ -91,8 +91,8 @@ export const likePost = (postId, userId) => {
       updateLike(likes, userIds, postId);
       updateEdit(userIds, postId);
     })
-    .catch((error) => {
-      //  console.log('error');
+    .catch(() => {
+      console.error('Like cannot be done.');
     });
 };
 
