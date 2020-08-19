@@ -90,7 +90,7 @@ Acesse o protótipo de baixa fidelidade clicando nas imagens abaixo:
 
 * Versão Desktop
 
-![login](https://www.figma.com/proto/PiTCXf7jiutzZ6baYbEqAX/Login-Desktop?node-id=1%3A7&scaling=scale-down)
+![login_ desk](https://user-images.githubusercontent.com/54040625/90685002-7c08f400-e23f-11ea-972a-40911ab1adb8.png)
 
 ![feed]()
 
