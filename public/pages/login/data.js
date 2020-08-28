@@ -1,3 +1,12 @@
+export const checkUser = (user) => {
+  const load = firebase.firestore().collection('users').doc(user.uid);
+  load.get().then((doc) => {
+    if (!doc.exists) {
+      newUser(user);
+    }
+  });
+};
+
 export const toggleSignIn = ({ email, password }, callback) => {
   firebase
     .auth()
@@ -24,7 +33,6 @@ export const loginGoogle = () => {
 
 export const loginGithub = () => {
   const provider = new firebase.auth.GithubAuthProvider();
-  // provider.addScope('user');
   firebase
     .auth()
     .signInWithPopup(provider)
@@ -37,7 +45,8 @@ export const loginGithub = () => {
 export const newUser = (user) => {
   firebase
     .firestore()
-    .collection('users').doc(user.uid)
+    .collection('users')
+    .doc(user.uid)
     .set({
       userName: user.displayName,
       user: user.uid,
@@ -45,20 +54,9 @@ export const newUser = (user) => {
       languages: '',
     })
     .then((docRef) => {
-      console.log("Document written with ID: ", docRef.id);
+      console.log('Document written with ID: ', docRef.id);
     })
     .catch((error) => {
-      console.error("Error adding document: ", error);
+      console.error('Error adding document: ', error);
     });
-};
-
-export const checkUser = (user) => {
-  const load = firebase
-  .firestore()
-  .collection('users').doc(user.uid)
-  load.get().then((doc) => {
-    if (!doc.exists) {
-      newUser(user);
-    }
-  });
 };
