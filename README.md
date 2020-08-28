@@ -92,11 +92,11 @@ Acesse o protótipo de baixa fidelidade clicando nas imagens abaixo:
 
 * Versão Desktop
 
-    ![login](./public/img/loginDesktop.png)
+![login_ desk](https://user-images.githubusercontent.com/54040625/90685002-7c08f400-e23f-11ea-972a-40911ab1adb8.png)
 
-    ![feed](./public/img/feedDektop.png)
+![feed](./public/img/feedDektop.png)
 
-    ![cadastro](./public/img/newAccountDesktop.png)
+![cadastro](./public/img/newAccountDesktop.png)
 
 ## 6. UI
 
